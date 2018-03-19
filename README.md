@@ -1,5 +1,5 @@
-# getNetworking
-iOS如何获取手机当前的网络状态
+# iOS如何获取手机当前的网络状态
+
 获取iOS网络状态，我目前知道的有两种办法。
 
 方法一：Reachability。
@@ -22,7 +22,7 @@ typedef enum : NSInteger {
 } NetworkStatus;  
 4、获取网络状态的代码
 
-[html] view plain copy
+
 #pragma mark - 获取网络状态  
 +(NSString *)internetStatus {  
       
@@ -60,7 +60,6 @@ typedef enum : NSInteger {
 
 这种方法通过监听手机的statusbar的状态还获取用户的网络状态。可以通过苹果的审核在Appstore上架。代码量非常小，简单易懂，最重要的是能区分2G、3G、4G、LTE。话不多说，直接上代码。
 
-[html] view plain copy
 + (NSString *)networkingStatesFromStatebar {  
     // 状态栏是由当前app控制的，首先获取当前app  
     UIApplication *app = [UIApplication sharedApplication];  
